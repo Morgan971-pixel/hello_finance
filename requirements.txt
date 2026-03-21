@@ -1,0 +1,16 @@
+# Data Science & Math
+numpy
+pandas
+scipy
+
+# Machine Learning & AI
+scikit-learn
+tensorflow
+transformers
+# torch # Ensure torch handles transformers locally if needed, but TF is used by LSTM
+
+# Financial Data extraction
+yfinance
+
+# Visualizations
+matplotlib

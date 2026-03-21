@@ -23,7 +23,8 @@ To separate concerns and keep the codebase organized, the project is divided int
 
 ### 4. `execution/` (Live Data & Integration)
 
-- **`realtime.py`**: Modules for handling live market data feeds and real-time execution logic using the `yfinance` library for robust extraction of historical and real-time market data directly from Yahoo Finance.
+- **`realtime.py`**: Modules for handling live market data feeds and real-time execution logic.
+- **`yfinance/`**: Submodule/local integration of the popular `yfinance` library for robust extraction of historical and real-time market data directly from Yahoo Finance.
 
 ## 🛠️ Setup & Installation
 
@@ -46,6 +47,7 @@ To separate concerns and keep the codebase organized, the project is divided int
    ```bash
    pip install -r requirements.txt
    ```
+   _(If you are setting up `yfinance` locally from the provided directory, you can run `pip install -e ./yfinance`)_
 
 ## Visualizations & Learnings
 
@@ -65,6 +67,8 @@ Here is a glimpse into what the repo code can produce, along with some key takea
 > **Takeaway:** An optimized strategy that looks great in a vacuum might still lose to a passive index fund or simply holding a blue-chip stock!
 
 ### Optimal Portfolio Allocation (MPT)
+
+The portfolio optimizer algorithm dynamically shifts weights away from an equal-distribution baseline (Sharpe: 0.77) to a risk-optimized frontier, pushing the system to a **Max Sharpe Ratio of 1.24** (generating an expected ~34% annual return against ~27% volatility).
 
 ![Portfolio Allocation](portfolio_allocation.png)
 
